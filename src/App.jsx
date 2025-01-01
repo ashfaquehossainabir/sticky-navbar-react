@@ -1,107 +1,36 @@
-import React, { useRef } from 'react'
+// Modules
+import React from 'react'
+
+// Components
+import Navbar from './components/Navbar'
 
 function App() {
-  // ===========================================================================
-  // -- Navbar height change functionality
-  // ===========================================================================
-
-  const navbar = useRef(null)
-
-  window.onscroll = function changeHeight() {
-    if(navbar.current) {
-      
-      if(document.documentElement.scrollTop > 20) {
-        navbar.current.classList.add("sticky-nav")
-      } else {
-        navbar.current.classList.remove("sticky-nav")
-      }
-
-    }
-  }
-
-
-  // ===========================================================================
-  // -- Nav Menu Items color change functionality
-  // ===========================================================================
-
-  const liElements = useRef([])
-
-  function changeColors() {
-    liElements.current.forEach((element, index) => {
-      if(element) {
-        element.classList.toggle("red")
-      }
-    })
-  }
-
-  // ===========================================================================
-  // -- Nav Menu Data
-  // ===========================================================================
-
-  const navItems = [
-    {
-      label: "home",
-      link: "#home",
-      className: "nav-link"
-    },
-    {
-      label: "about",
-      link: "#about",
-      className: "nav-link"
-    },
-    {
-      label: "services",
-      link: "#services",
-      className: "nav-link"
-    },
-    {
-      label: "reviews",
-      link: "#reviews",
-      className: "nav-link"
-    },
-    {
-      label: "contact",
-      link: "#contact",
-      className: "nav-link"
-    },
-  ]
-
-
+  
   return (
     <>
-      <header ref={ navbar }>
-        <div className="container">
-          <nav>
-            <h1>Brand Logo</h1>
+      <main>
+        <Navbar/>
 
-            <ul>
-              { navItems.map(({ label, link, className }, key) => (
-                <li key={ key } id={ `link-${key + 1}` }>
-                  <a href={ link } className={ className } ref={ (el) => (liElements.current[key] = el) }>{ label }</a>
-                </li>
-              )) }
-            </ul>
+        <section className="section section-1" id="home">
+          <h1>Section 1</h1>
+        </section>
 
-            <button className='nav-btn' onClick={ changeColors }>Browse More</button>
-          </nav>
-        </div>
-      </header>
+        <section className="section section-2" id="about">
+          <h1>Section 2</h1>
+        </section>
 
-      <section className="section section-1">
-        <h1>Section 1</h1>
-      </section>
-      <section className="section">
-        <h1>Section 2</h1>
-      </section>
-      <section className="section">
-        <h1>Section 3</h1>
-      </section>
-      <section className="section">
-        <h1>Section 4</h1>
-      </section>
-      <section className="section">
-        <h1>Section 5</h1>
-      </section>
+        <section className="section section-3" id="services">
+          <h1>Section 3</h1>
+        </section>
+
+        <section className="section section-4" id="reviews">
+          <h1>Section 4</h1>
+        </section>
+        
+        <section className="section section-5" id="contact">
+          <h1>Section 5</h1>
+        </section>
+      </main>
     </>
   )
 }

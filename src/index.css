@@ -1,3 +1,7 @@
+/* ===========================================
+--- Reset
+=========================================== */
+
 *,
 *::before,
 *::after {
@@ -5,6 +9,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+
+/* ===========================================
+--- Preset
+=========================================== */
 
 a {
   display: inline-block;
@@ -26,12 +35,17 @@ button {
   margin: 0 auto;
 }
 
+
+/* ===========================================
+--- Navbar Section
+=========================================== */
+
 header {
   position: fixed;
   width: 100%;
   padding: 20px 0;
   transition: 0.5s;
-  background: lightblue;
+  background: hsl(0, 0%, 95%);
 }
 
 nav {
@@ -70,6 +84,9 @@ nav button.nav-btn:active {
   color: red;
 }
 
+
+/* Sticky Nav */
+
 .sticky-nav {
   padding: 10px 0;
   background: #333;
@@ -100,6 +117,11 @@ nav button.nav-btn:active {
   background: hsl(0, 0%, 70%);
 }
 
+
+/* ===========================================
+--- Section Part
+=========================================== */
+
 section.section  {
   height: 100vh;
   display: flex;
@@ -110,4 +132,24 @@ section.section  {
 
 section.section:not(:last-child) {
   border-bottom: 1px solid hsl(0, 0%, 50%);
+}
+
+section.section-1 {
+  background: lightblue;
+}
+
+section.section-2 {
+  background: lightgoldenrodyellow;
+}
+
+section.section-3 {
+  background: lightseagreen;
+}
+
+section.section-4 {
+  background: lightsalmon;
+}
+
+section.section-5 {
+  background: lightgreen;
 }
