@@ -1,0 +1,113 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  padding: 20px 0;
+  transition: 0.5s;
+  background: lightblue;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  gap: 24px;
+}
+
+nav ul li a {
+  text-transform: capitalize;
+  color: #000;
+  transition: all 0.4s ease;
+}
+
+nav ul li a:hover {
+  color: red;
+}
+
+nav button.nav-btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  background: #333;
+}
+
+nav button.nav-btn:active {
+  background: hsl(0, 0%, 40%);
+}
+
+.red {
+  color: red;
+}
+
+.sticky-nav {
+  padding: 10px 0;
+  background: #333;
+}
+
+.sticky-nav .red {
+  color: red;
+}
+
+.sticky-nav nav h1 {
+  color: #fff;
+}
+
+.sticky-nav nav ul li a {
+  color: #fff;
+}
+
+.sticky-nav nav ul li a:hover {
+  color: red;
+}
+
+.sticky-nav nav button.nav-btn {
+  color: #000;
+  background: #fff;
+}
+
+.sticky-nav nav button.nav-btn:active {
+  background: hsl(0, 0%, 70%);
+}
+
+section.section  {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(0, 0%, 90%);
+}
+
+section.section:not(:last-child) {
+  border-bottom: 1px solid hsl(0, 0%, 50%);
+}
