@@ -1,5 +1,6 @@
 // Modules
 import React, { useEffect, useRef } from 'react'
+import { ToastContainer, toast } from 'react-toastify'
 
 // Components
 import Navbar from './components/Navbar'
@@ -10,7 +11,16 @@ function App() {
 
   useEffect(() => {
     const handleClick = () => {
-      console.log("Button Clicked")
+      toast.success('Button Clicked!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
     }
 
     const button = buttonRef.current
@@ -31,6 +41,8 @@ function App() {
   return (
     <>
       <main>
+        <ToastContainer/>
+
         <Navbar/>
 
         <section className="section section-1" id="home">
