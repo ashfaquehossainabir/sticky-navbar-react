@@ -143,7 +143,7 @@ img.bars-icon {
 .mobile-nav .close-btn img.x-icon {
   position: absolute;
   right: 20px;
-  top: 20px;
+  top: 30px;
   height: 20px;
 }
 
@@ -222,7 +222,7 @@ section.section-5 {
     top: 0;
     width: 100%;
     height: 100vh;
-    padding-top: 60px;
+    padding-top: 70px;
     transition: all 0.5s ease;
     background: #0E2431;
     z-index: 99999;
@@ -239,6 +239,10 @@ section.section-5 {
   header .mobile-nav ul li a {
     text-transform: capitalize;
     color: #fff;
+  }
+
+  header .mobile-nav ul li a:active {
+    color: red;
   }
 
   nav {
