@@ -174,6 +174,8 @@ img.bars-icon {
 section.section  {
   height: 100vh;
   display: flex;
+  flex-direction: column;
+  row-gap: 20px;
   align-items: center;
   justify-content: center;
   background: hsl(0, 0%, 90%);
@@ -185,6 +187,17 @@ section.section:not(:last-child) {
 
 section.section-1 {
   background: lightblue;
+}
+
+section button.section-btn {
+  padding: 15px 30px;
+  border-radius: 10px;
+  color: #fff;
+  background: #333;
+}
+
+section button.section-btn:active {
+  background: hsl(0, 0%, 40%);
 }
 
 section.section-2 {
@@ -210,7 +223,6 @@ section.section-5 {
 =========================================== */
 
 @media screen and (max-width: 750px) {
-  /* Here */
   nav ul.desktop-nav-list {
     display: none;
   }

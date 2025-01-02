@@ -34,9 +34,9 @@ const Navbar = () => {
 
     function changeColors() {
         liElements.current.forEach((element, index) => {
-        if(element) {
-            element.classList.toggle("red")
-        }
+            if(element) {
+                element.classList.toggle("red")
+            }
         })
     }
 
@@ -57,6 +57,7 @@ const Navbar = () => {
             mobileNav.current.style.left = "-100%"
         }
     }
+
 
     // ===========================================================================
     // -- Nav Menu Data
@@ -144,7 +145,7 @@ const Navbar = () => {
                     <ul className='mobile-nav-list'>
                         { navItems.map(({ label, link, className }, key) => (
                             <li key={ key } id={ `link-${key + 1}` }>
-                                <a href={ link } className={ className }>
+                                <a href={ link } className={ className } onClick={ closeNav }>
                                     { label }
                                 </a>
                             </li>

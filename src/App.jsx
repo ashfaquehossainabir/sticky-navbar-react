@@ -1,11 +1,32 @@
 // Modules
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 
 // Components
 import Navbar from './components/Navbar'
 
 
 function App() {
+  const buttonRef = useRef(null)
+
+  useEffect(() => {
+    const handleClick = () => {
+      console.log("Button Clicked")
+    }
+
+    const button = buttonRef.current
+
+    if(button) {
+      button.addEventListener('click', handleClick)
+    }
+
+    // Cleanup the event listener
+    return () => {
+      if(button) {
+        button.removeEventListener('click', handleClick)
+      }
+    }
+
+  }, [])
   
   return (
     <>
@@ -14,6 +35,7 @@ function App() {
 
         <section className="section section-1" id="home">
           <h1>Section 1</h1>
+          <button className='section-btn' ref={ buttonRef }>Click Here</button>
         </section>
 
         <section className="section section-2" id="about">
