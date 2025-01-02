@@ -1,3 +1,7 @@
+/* Import Inter Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
 /* ===========================================
 --- Reset
 =========================================== */
@@ -8,6 +12,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
 
@@ -57,7 +62,13 @@ nav {
 nav .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
+}
+
+nav .logo h1 {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: hsl(250, 88%, 60%); /* #6a4df4 */
 }
 
 nav ul {
@@ -125,6 +136,10 @@ header .mobile-nav {
 
 .sticky-nav nav button.nav-btn:active {
   background: hsl(0, 0%, 70%);
+}
+
+.sticky-nav nav .logo svg path {
+  fill: #fff;
 }
 
 .mobile-menu-btn {
